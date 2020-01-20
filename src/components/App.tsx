@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import Web3 from "web3"
-import Web3ConnectButton from "src/components/Web3ConnectButton"
-import { getReadOnlyWeb3Provider, getWeb3Account } from "src/utils/web3"
+import React, { useState } from 'react'
+import Web3 from 'web3'
+import Web3ConnectButton from 'src/components/Web3ConnectButton'
+import { getReadOnlyWeb3Provider, getWeb3Account } from 'src/utils/web3'
 
 const App: React.FC = () => {
   const [web3, setWeb3] = useState<any>(new Web3(getReadOnlyWeb3Provider()))
@@ -23,7 +23,7 @@ const App: React.FC = () => {
   return (
     <div>
       <h1>Conditional Tokens Tutorial App Example</h1>
-        <Web3ConnectButton account={account} setProviderData={setProviderData}/>
+      <Web3ConnectButton account={account} setProviderData={setProviderData} />
     </div>
   )
 }
