@@ -21,7 +21,7 @@
 require('dotenv').config()
 
 const HDWalletProvider = require('@truffle/hdwallet-provider')
-const mnemonic = process.env.REACT_APP_MNEMONIC || 'myth like bonus scare over problem client lizard pioneer submit female collect'
+const mnemonic = process.env.REACT_APP_OPERATOR_MNEMONIC || 'myth like bonus scare over problem client lizard pioneer submit female collect'
 
 const createInfuraEntry = (networkName, networkId, gasPrice) => ({
   [networkName]: {
