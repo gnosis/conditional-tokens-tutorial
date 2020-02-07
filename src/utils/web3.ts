@@ -17,12 +17,6 @@ export const getCurrentNetworkName = () => {
   }
 }
 
-export const getReadOnlyWeb3Provider = () => {
-  const networkName = getCurrentNetworkName()
-  const infuraId = process.env.REACT_APP_INFURA_ID
-  return networkName && infuraId ? `wss://${networkName}.infura.io/ws/v3/${infuraId}` : null
-}
-
 export const getWeb3Account = async (web3: any) => {
   if (!web3) return null
   if (web3.defaultAccount == null) {
