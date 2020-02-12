@@ -49,7 +49,7 @@ Available Accounts
 - The second address `0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0` will be the oracle who have the answer and resolves the market.
 - The third `0x22d491Bde2303f2f43325b2108D26f1eAbA1e32b` and the forth `0xE11BA2b4D45Eaed5996Cd0823791E0C93114882d` will be two traders who participate in the market.
 
-Check the `.env` file in the root folder of the project and you will find what it was previously stated:
+Find the `.env.example` file in the root folder of the project, rename this file to `.env` and check what it was previously stated:
 ```
 REACT_APP_OPERATOR_MNEMONIC='myth like bonus scare over problem client lizard pioneer submit female collect'
 REACT_APP_OPERATOR_ADDRESS=0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1
@@ -59,7 +59,7 @@ REACT_APP_INFURA_ID=
 REACT_APP_NETWORK_ID=
 ```
 - `REACT_APP_OPERATOR_MNEMONIC` and `REACT_APP_OPERATOR_ADDRESS` are related with the operator mnemonic and account. We will need both to deploy the conditional tokens smart contracts and to give the operator the right privileges inside the app.
-- `REACT_APP_FUNDING` indicates the initial funding of the market given by the operator.
+- `REACT_APP_FUNDING` indicates the initial funding (collateral token) of the market given by the operator.
 - `REACT_APP_ORACLE_ADDRESS` is the oracle address who will resolve the market.
 - `REACT_APP_INFURA_ID` is your Infura project id. It is not needed in case you are using your local environment with Ganache.
 - `REACT_APP_NETWORK_ID` is the network id. It is not needed in case you are using your local environment. It could be `1`, `3`, `4`, `5` or `42`, depending on the network you would like to use.
@@ -80,6 +80,12 @@ Check that all the contracts have been deployed to your local network.
 ```
 truffle networks
 ```
+
+To deploy the contracts in a different network, use the command
+```
+truffle migrate --network <NETWORK_NAME>
+```
+where `<NETWORK_NAME>` can be `mainnet`, `ropsten`, `rinkeby`, `goerli` or `kovan`, according to the configuration file `/truffle.js` in our project. If you use this option later, remember to update all the required environment variables.
 
 ## Running the app
 

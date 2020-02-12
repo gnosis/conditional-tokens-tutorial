@@ -18,6 +18,5 @@ In this Tutorial we will cover:
 - How to enable trading
 - How to resolve Market
 - How to redeem positions
-- How to deploy and integrate the Prediction Market in your Dapp 
 
 During this Tutorial we will guide you through setting up a prediction market. It will serve as an example to make you familiar with the different terms. You can replace it by any other use case and build e.g. an Prediction market for political events, price forecasting etc. 
