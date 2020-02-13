@@ -57,12 +57,13 @@ REACT_APP_FUNDING=1000000000000000000
 REACT_APP_ORACLE_ADDRESS=0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0
 REACT_APP_INFURA_ID=
 REACT_APP_NETWORK_ID=
+REACT_APP_NETWORK=
 ```
 - `REACT_APP_OPERATOR_MNEMONIC` and `REACT_APP_OPERATOR_ADDRESS` are related with the operator mnemonic and account. We will need both to deploy the conditional tokens smart contracts and to give the operator the right privileges inside the app.
 - `REACT_APP_FUNDING` indicates the initial funding (collateral token) of the market given by the operator.
 - `REACT_APP_ORACLE_ADDRESS` is the oracle address who will resolve the market.
 - `REACT_APP_INFURA_ID` is your Infura project id. It is not needed in case you are using your local environment with Ganache.
-- `REACT_APP_NETWORK_ID` is the network id. It is not needed in case you are using your local environment. It could be `1`, `3`, `4`, `5` or `42`, depending on the network you would like to use.
+- `REACT_APP_NETWORK_ID` and `REACT_APP_NETWORK` are the network id and name. They are not needed in case you are using your local environment.
 
 ## Contracts deployment
 
