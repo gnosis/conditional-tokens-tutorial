@@ -47,8 +47,8 @@ The function [reportPayouts](https://github.com/gnosis/conditional-tokens-contra
 ```
 function reportPayouts(bytes32 questionId, uint[] calldata payouts) external
 ```
-- questionId: The question id the oracle is answering for
-- payouts: The oracle's answer
+- `questionId`: The question id the oracle is answering for
+- `payouts`: The oracle's answer
 
 If the function succeeds, the following [event](https://github.com/gnosis/conditional-tokens-contracts/blob/master/contracts/ConditionalTokens.sol#L20) will be emitted, meaning that the condition was resolved.
 

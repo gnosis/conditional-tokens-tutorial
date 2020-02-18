@@ -4,7 +4,8 @@ title: Setting up the development environment
 sidebar_label: Setting up the development environment
 ---
 
-This example project is a React application bootstrapped with create-react-app using TypeScript. For more information on those projects, visit their websites. We assume you are familiar with these technologies as this tutorial will only cover things you need to integrate the Gnosis Conditional Tokens.
+This example project is a React application bootstrapped with [create-react-app](https://github.com/facebook/create-react-app) using [TypeScript](https://www.typescriptlang.org/).
+For more information on those projects, visit their websites. We assume you are familiar with these technologies as this tutorial will only cover things you need to integrate the **Gnosis Conditional Tokens**.
 
 Before we are getting started you will need to set up your development environment.
 
@@ -12,12 +13,12 @@ Before we are getting started you will need to set up your development environme
 
 First of all, you will need to run your personal blockchain locally using Ganache and Truffle.
 
-Install them using npm:
+Install them using `npm`:
 ```
 npm install -g ganache-cli
 npm install -g truffle
 ```
-or, if you are using Yarn:
+or, if you are using `yarn`:
 ```
 yarn global add ganache-cli
 yarn global add truffle
@@ -72,7 +73,7 @@ Once you have your `ganache-cli` instance running, if you have been using your l
 truffle networks --clean
 truffle networks
 ```
-Now the contracts must be compiled and deployed using the migrations you can find in the `/migrations` folder in the project.
+Now the contracts must be compiled and deployed using the migrations you can find in the `migrations/` folder in the project.
 ```
 truffle compile
 truffle migrate

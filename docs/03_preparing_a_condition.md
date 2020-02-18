@@ -28,8 +28,7 @@ Because the contract does not store information about the condition like the tit
 
 ## Prepare the condition
 
-
-While this action could be created dynamically using the interface and filling a form while tha app is running, here we are going to define only one condition in the configuration file `/markets.config.js` and use the truffle migration number 6 (`06_prepare_conditions.js`) to prepare it.
+While this action could be created dynamically using the interface and filling a form while the app is running, here we are going to define only one condition in the configuration file `/markets.config.js` and use the truffle migration number 6 (`06_prepare_conditions.js`) to prepare it.
 ```
 const deployConfig = require("./utils/deployConfig")(artifacts);
 const ConditionalTokens = artifacts.require("ConditionalTokens");
@@ -51,9 +50,9 @@ The function [prepareCondition](https://github.com/gnosis/conditional-tokens-con
 ```
 function prepareCondition(address oracle, bytes32 questionId, uint payoutDenominator, uint outcomeSlotCount) external
 ```
-- oracle: The account assigned to report the result for the prepared condition. In this example we are using `0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0`.
-- questionId: An identifier for the question to be answered by the oracle. It is up to the consumers of the contract to interpret the meaning of the question ID. For example, it could be an IPFS hash which can be used to retrieve a document specifying the question more fully.
-- outcomeSlotCount: The number of outcome slots which should be used for this condition. Must not exceed 256. In our example we only have two possible answers: "Yes" and "No".
+- `oracle`: The account assigned to report the result for the prepared condition. In this example we are using `0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0`.
+- `questionId`: An identifier for the question to be answered by the oracle. It is up to the consumers of the contract to interpret the meaning of the question ID. For example, it could be an IPFS hash which can be used to retrieve a document specifying the question more fully.
+- `outcomeSlotCount`: The number of outcome slots which should be used for this condition. Must not exceed 256. In our example we only have two possible answers: "Yes" and "No".
 
 If the function succeeds, the following [event](https://github.com/gnosis/conditional-tokens-contracts/blob/master/contracts/ConditionalTokens.sol#L13) will be emitted, signifying the preparation of a condition:
 

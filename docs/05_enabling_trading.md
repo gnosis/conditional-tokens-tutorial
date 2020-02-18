@@ -18,8 +18,8 @@ The function [trade](https://github.com/gnosis/conditional-tokens-market-makers/
 ```
 function trade(int[] memory outcomeTokenAmounts, int collateralLimit) public atStage(Stage.Running) onlyWhitelisted returns (int netCost)
 ```
-- outcomeTokenAmounts: Amounts of each atomic outcome token to buy or sell. If positive, will buy this amount of outcome token from the market. If negative, will sell this amount back to the market instead.
-- collateralLimit: If positive, this is the limit for the amount of collateral tokens which will be sent to the market to conduct the trade. If negative, this is the minimum amount of collateral tokens which will be received from the market for the trade. If zero, there is no limit.
+- `outcomeTokenAmounts`: Amounts of each atomic outcome token to buy or sell. If positive, will buy this amount of outcome token from the market. If negative, will sell this amount back to the market instead.
+- `collateralLimit`: If positive, this is the limit for the amount of collateral tokens which will be sent to the market to conduct the trade. If negative, this is the minimum amount of collateral tokens which will be received from the market for the trade. If zero, there is no limit.
 
 If the function succeeds, the following [event](https://github.com/gnosis/conditional-tokens-market-makers/blob/master/contracts/MarketMaker.sol#L29) will be emitted:
 ```

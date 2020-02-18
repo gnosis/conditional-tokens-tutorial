@@ -6,7 +6,7 @@ sidebar_label: Tying in the market maker
 
 After deploying the ConditionalTokens contract and preparing the condition we need to create the market maker using the MarketMakerFactory contract. You can find this process in the truffle migration called `07_create_lmsr_mm.js`.
 
-First of all we need to get the condition id of our condition, providing the oracle address, the question id and the number of outcomes of the question (in this case we have to possible outcomes: "Yes" and "No").
+First of all we need to get the `condition id` of our condition, providing the `oracle address`, the `question id` and the `number of outcomes` of the question (in this case we have to possible outcomes: "Yes" and "No").
 ```
 const conditionIds = markets.map(({ questionId }) =>
   web3.utils.soliditySha3(
