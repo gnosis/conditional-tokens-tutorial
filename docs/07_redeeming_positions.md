@@ -6,8 +6,6 @@ sidebar_label: Redeeming positions
 
 Before redeeming your positions in the market is possible, the oracle must report the correct answer to the contract.
 
-
-
 In the `ConditionalTokensRepo.ts` file it is defined the function that calls the contract to redeem the positions of the trader:
 ```
 redeemPositions = async (
