@@ -4,7 +4,7 @@ title: Resolving the market
 sidebar_label: Resolving the market
 ---
 
-Before the market is resolved by the oracle, the operator should close it first to avoid participants continue trading when the right answer is already publicly available.
+Before the market is resolved by the oracle, the operator should close it first to prevent participants from continuing trading when the right answer is already publicly available.
 
 ## Closing the market
 
