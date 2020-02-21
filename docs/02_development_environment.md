@@ -68,19 +68,10 @@ REACT_APP_NETWORK=
 
 ## Contracts deployment
 
-Once you have your `ganache-cli` instance running, if you have been using your local network recently, run this commands to clean any extraneous network artifact and check that it was successful:
-```
-truffle networks --clean
-truffle networks
-```
 Now the contracts must be compiled and deployed using the migrations you can find in the `migrations/` folder in the project.
 ```
 truffle compile
 truffle migrate
-```
-Check that all the contracts have been deployed to your local network.
-```
-truffle networks
 ```
 
 To deploy the contracts in a different network, use the command
@@ -88,6 +79,8 @@ To deploy the contracts in a different network, use the command
 truffle migrate --network <NETWORK_NAME>
 ```
 where `<NETWORK_NAME>` can be `mainnet`, `ropsten`, `rinkeby`, `goerli` or `kovan`, according to the configuration file `/truffle.js` in our project. If you use this option later, remember to update all the required environment variables.
+
+If all the contracts where deployed correctly, the last step will be to run the app.
 
 ## Running the app
 
