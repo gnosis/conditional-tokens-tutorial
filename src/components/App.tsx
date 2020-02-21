@@ -25,7 +25,7 @@ const App: React.FC = () => {
   return (
     <div className={styles.container}>
       <h1>Conditional Tokens Tutorial: Categorical Market Example</h1>
-      {process.env.REACT_APP_ORACLE_ADDRESS && process.env.REACT_APP_INFURA_ID ? (
+      {process.env.REACT_APP_ORACLE_ADDRESS && process.env.REACT_APP_OPERATOR_ADDRESS ? (
         <>
           <Web3ConnectButton account={account} setProviderData={setProviderData} />
           {web3 && account && <Market web3={web3} account={account} />}
