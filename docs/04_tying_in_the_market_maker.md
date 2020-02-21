@@ -4,9 +4,9 @@ title: Tying in the market maker
 sidebar_label: Tying in the market maker
 ---
 
-After deploying the ConditionalTokens contract and preparing the condition we need to create the market maker using the MarketMakerFactory contract. You can find this process in the truffle migration called `07_create_lmsr_mm.js`.
+After deploying the `ConditionalTokens` contract and preparing the condition we need to create the market maker using the `MarketMakerFactory` contract. You can find this process in the truffle migration called `07_create_lmsr_mm.js`.
 
-First of all we need to get the `condition id` of our condition, providing the `oracle address`, the `question id` and the `number of outcomes` of the question (in this case we have to possible outcomes: "Yes" and "No").
+First of all we need to get the `condition id` of our condition, providing the `oracle address`, the `question id` and the `number of outcomes` of the question (in this case we have two possible outcomes: "Yes" and "No").
 ```
 const conditionIds = markets.map(({ questionId }) =>
   web3.utils.soliditySha3(
@@ -31,7 +31,8 @@ await collateralToken.deposit({ value: ammFunding });
 await collateralToken.approve(lmsrMarketMakerFactory.address, ammFunding);
 ```
 
-The next step is to create the market maker calling the function [createLMSRMarketMaker](https://github.com/gnosis/conditional-tokens-market-makers/blob/37f066a6f78a13845484c9d9a9f5c66b5dad6d95/contracts/LMSRMarketMakerFactory.sol#L116) from the LMSRMarketMakerFactory contract and check that the creation was successfully looking for the emitted [event](https://github.com/gnosis/conditional-tokens-market-makers/blob/37f066a6f78a13845484c9d9a9f5c66b5dad6d95/contracts/LMSRMarketMakerFactory.sol#L43).
+The next step is to create the market maker calling the function [createLMSRMarketMaker](https://github.com/gnosis/conditional-tokens-market-makers/blob/37f066a6f78a13845484c9d9a9f5c66b5dad6d95/contracts/LMSRMarketMakerFactory.sol#L116)
+from the `LMSRMarketMakerFactory` contract and check that the creation was successful looking for the emitted [event](https://github.com/gnosis/conditional-tokens-market-makers/blob/37f066a6f78a13845484c9d9a9f5c66b5dad6d95/contracts/LMSRMarketMakerFactory.sol#L43).
 ```
 function createLMSRMarketMaker(ConditionalTokens pmSystem, IERC20 collateralToken, bytes32[] calldata conditionIds, uint64 fee, Whitelist whitelist, uint funding) external returns (LMSRMarketMaker lmsrMarketMaker)
 ```
@@ -47,6 +48,7 @@ event LMSRMarketMakerCreation(
 );
 ```
 
+Rest of `/migrations/07_create_lmsr_mm.js`:
 ```
 const conditionalTokens = await artifacts
   .require("ConditionalTokens")

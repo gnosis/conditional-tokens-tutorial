@@ -28,7 +28,7 @@ Because the contract does not store information about the condition like the tit
 
 ## Prepare the condition
 
-While this action could be created dynamically using the interface and filling a form while the app is running, here we are going to define only one condition in the configuration file `/markets.config.js` and use the truffle migration number 6 (`06_prepare_conditions.js`) to prepare it.
+While this action could be created dynamically using the interface and filling a form while the app is running, here we are going to define only one condition in the configuration file `/markets.config.js` and use the truffle migration number 6 (`/migrations/06_prepare_conditions.js`) to prepare it.
 ```
 const deployConfig = require("./utils/deployConfig")(artifacts);
 const ConditionalTokens = artifacts.require("ConditionalTokens");
