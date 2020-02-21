@@ -35,7 +35,7 @@ cd conditional-tokens-tutorial
 yarn install
 ```
 
-## Environmental variables
+## Environment variables
 
 In our web app we are going to use only the first four addresses from Ganache. Of course, any addresses can be used as long as the project configuration is updated:
 ```
