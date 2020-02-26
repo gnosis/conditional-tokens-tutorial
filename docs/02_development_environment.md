@@ -28,6 +28,11 @@ Run `ganache-cli` using the deterministic option to make the tutorial easier to 
 ganache-cli -d
 ```
 
+These are the versions used in this tutorial:
+- `truffle`: v5.1.13
+- `node`: v10.16.3
+- `ganache-cli`: v6.9.1
+
 Now please download and install the [Conditional Tokens Tutorial](https://github.com/gnosis/conditional-tokens-tutorial) repository from GitHub:
 ```
 git clone https://github.com/gnosis/conditional-tokens-tutorial.git
