@@ -29,10 +29,10 @@ The function [redeemPositions](https://github.com/gnosis/conditional-tokens-cont
 ```
 function redeemPositions(IERC20 collateralToken, bytes32 parentCollectionId, bytes32 conditionId, uint[] calldata indexSets) external
 ```
-- collateralToken: 
-- parentCollectionId: 
-- conditionId: 
-- indexSets: 
+- `collateralToken`: ERC20 token which exists on the same chain as the ConditionalTokens instance and is used as collateral to back positions.
+- `parentCollectionId`: Collection ID of the parent outcome collection, or bytes32(0) if there's no parent.
+- `conditionId`: It may be derived from other parameters via ``keccak256(abi.encodePacked(oracle, questionId, outcomeSlotCount))``.
+- `indexSets`: Is a bit array where the 0<sup>th</sup> index corresponds with the 0<sup>th</sup> outcome slot and also whether or not the 1<sup>st</sup> place (1 << 0) is set in the value of indexSets. Similarly, the 1<sup>st</sup> index corresponds with  the 1<sup>st</sup> outcome slot and is whether or not the 2<sup>nd</sup> place (1 << 1) is set. It is supposed to represent a "union" of outcome slots. So like a value of 3 (0b11) would represent a position that pays out when either outcome slots [0] or [1] occur.
 
 If the function succeeds, the following [event](https://github.com/gnosis/conditional-tokens-contracts/blob/master/contracts/ConditionalTokens.sol#L46) will be emitted.
 ```

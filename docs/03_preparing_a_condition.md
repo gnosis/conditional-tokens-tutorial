@@ -48,7 +48,7 @@ The function `prepareCondition` is used to prepare the condition, which will be 
 
 The function [prepareCondition](https://github.com/gnosis/conditional-tokens-contracts/blob/master/contracts/ConditionalTokens.sol#L65) is defined in the ConditionalTokens contract and it has three parameters:
 ```
-function prepareCondition(address oracle, bytes32 questionId, uint payoutDenominator, uint outcomeSlotCount) external
+function prepareCondition(address oracle, bytes32 questionId, uint outcomeSlotCount) external
 ```
 - `oracle`: The account assigned to report the result for the prepared condition. In this example we are using `0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0`.
 - `questionId`: An identifier for the question to be answered by the oracle. It is up to the consumers of the contract to interpret the meaning of the question ID. For example, it could be an IPFS hash which can be used to retrieve a document specifying the question more fully.
