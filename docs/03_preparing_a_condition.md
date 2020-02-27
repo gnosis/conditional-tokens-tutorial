@@ -4,7 +4,7 @@ title: Preparing a condition
 sidebar_label: Preparing a condition
 ---
 
-In the previous step we just learnt how to set up a local environment to run the Conditional Tokens Tutorial App. In this section we are going to focus on how to create a condition or question to be displayed in the app.
+In the previous step we just learned how to set up a local environment to run the Conditional Tokens Tutorial App. In this section we are going to focus on how to create a condition or question to be displayed in the app.
 
 ## Define a condition
 
@@ -51,7 +51,7 @@ The function [prepareCondition](https://github.com/gnosis/conditional-tokens-con
 function prepareCondition(address oracle, bytes32 questionId, uint payoutDenominator, uint outcomeSlotCount) external
 ```
 - `oracle`: The account assigned to report the result for the prepared condition. In this example we are using `0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0`.
-- `questionId`: An identifier for the question to be answered by the oracle. It is up to the consumers of the contract to interpret the meaning of the question ID. For example, it could be an IPFS hash which can be used to retrieve a document specifying the question more fully.
+- `questionId`: An identifier for the question to be answered by the oracle. It is up to the consumers of the contract to interpret the meaning of the question ID. For example, it could be an IPFS hash which can be used to retrieve a document specifying the question more fully. Note that questionId must be of type bytes32
 - `outcomeSlotCount`: The number of outcome slots which should be used for this condition. Must not exceed 256. In our example we only have two possible answers: "Yes" and "No".
 
 If the function succeeds, the following [event](https://github.com/gnosis/conditional-tokens-contracts/blob/master/contracts/ConditionalTokens.sol#L13) will be emitted, signifying the preparation of a condition:
