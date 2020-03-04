@@ -20,5 +20,5 @@ In this tutorial we will cover:
 - Redeeming positions
 
 During this tutorial we guide you through the entire process of setting up a prediction market. 
-It will serve as an example to familiarize yourself with the termonology.
-Feel free to replace the example market with any other use case such as political events, price forecasting etc. 
+It will serve as an example to familiarize yourself with the terminology.
+Feel free to replace the example market with any other use case such as political events, price forecasting, etc. 
