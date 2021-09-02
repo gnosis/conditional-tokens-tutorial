@@ -1,6 +1,6 @@
-import ConditionalTokens from '../../build/contracts/ConditionalTokens.json'
-import LMSRMarketMaker from '../../build/contracts/LMSRMarketMaker.json'
-import WETH9 from '../../build/contracts/WETH9.json'
+import ConditionalTokens from '../abi/ConditionalTokens.json'
+import LMSRMarketMaker from '../abi/LMSRMarketMaker.json'
+import WETH9 from '../abi/WETH9.json'
 const TruffleContract = require('@truffle/contract')
 
 let contracts: Object | undefined
