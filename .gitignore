@@ -10,6 +10,7 @@
 
 # production
 /build
+/src/abi
 
 # misc
 .DS_Store
